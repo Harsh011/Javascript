@@ -319,3 +319,48 @@ console.log(arr);
 */
 
 // -------------------------------------------------------------------------------
+
+// Question 20 : Implicit and Explicit Binding
+
+// var obj = {
+//   name: "Harsh",
+//   display: function () {
+//     console.log(this.name);
+//   },
+// };
+
+// var obj1 = {
+//   name: "ABC",
+// };
+
+// obj.display.call(obj1);
+
+// ------------------------------------------------
+
+// Question 21 : Implement caching/Memoize Function
+
+// const clumsysquare = (num1, num2) => {
+//   for (let i = 0; i < 100000000; i++) {}
+
+//   return num1 * num2;
+// };
+
+// console.time("First call");
+// console.log(clumsysquare(9467, 7649));
+// console.timeEnd("First call");
+// console.time("Second call");
+// console.log(clumsysquare(9467, 7649));
+// console.timeEnd("Second call");
+
+// -------------------------------------------------------
+
+// Question 22 :- Infintie Currying
+
+function add(a) {
+  return function (b) {
+    if (b) return a + b;
+    return a;
+  };
+}
+
+console.log(add(5)(2)(4)(8)(10)());
