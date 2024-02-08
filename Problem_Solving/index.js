@@ -354,6 +354,7 @@ console.log(arr);
 
 // -------------------------------------------------------
 
+/*
 // Question 22 :- Infintie Currying
 
 function add(a) {
@@ -364,3 +365,95 @@ function add(a) {
 }
 
 console.log(add(5)(2)(4)(8)(10)());
+*/
+
+// ----------------------------------------------------------------------
+/*
+// Question 23 :-
+let a = 10,
+  b = 10,
+  c = 10;
+
+if ((a == b) == c) {  //a==b==c
+  console.log("Hello");//1 == c (1==10) false
+} else {
+  console.log("By By"); //by by
+}
+*/
+
+// ---------------------------------------------------------------
+
+/*
+//  Question 24 :-
+ 
+console.log("1 :- ", 8 + "5");
+console.log("2 :- ", "5" + 8);
+console.log("3 :- ", 8 - "5");
+console.log("4 :- ", "5" - 8);
+console.log("5 :- ", "1" - -"1");
+console.log("6 :- ", "1" + +"1");
+console.log("7 :- ", "1" - +"1");
+console.log("8 :- ", "1" + -"1");
+console.log("9 :- ", "9" > "11");
+console.log("10 :- ", "9" > 11);
+console.log("11 :- ", "" > -1);
+console.log("12 :- ", "Rowdy" > 1);
+*/
+
+// --------------------------------------------------------------------------
+
+/*
+// Question 25 :-
+
+var length = 10;
+function fn() {
+  console.log("hi", this.length);
+}
+var obj = {
+  length: 5,
+  method: function (fn) {
+    fn();
+    arguments[0]();
+  },
+};
+obj.method(fn, 1);
+
+*/
+
+// ------------------------------------------------------------------------
+/*
+// Question 26 :-
+
+(function () {
+  console.log(1);
+  setTimeout(() => {
+    console.log(2);
+  }, 1000);
+  setTimeout(() => {
+    console.log(3);
+  }, 0);
+  console.log(4);
+})(); // 1 4 3 2
+
+*/
+
+// ----------------------------------------------------------------
+
+/*
+// Question 27 :-
+
+function add() {
+  console.log(1);
+  setTimeout(() => {
+    console.log(2);
+  }, 1000);
+  setTimeout(
+    (function () {
+      console.log(3); // adding IEF function
+    })(),
+    0
+  );
+  console.log(4);
+}
+add(); // 1 3 4 2
+*/
